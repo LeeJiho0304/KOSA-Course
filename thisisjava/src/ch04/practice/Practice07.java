@@ -35,16 +35,18 @@ public class Practice07 {
 			
 			System.out.println();
 			
-			/* switch문
+			//witch문
+			/*
 			switch(strNum) {
 				case "1":
 					System.out.print("예금액> ");
+					//case에서 변수 선언해도 다른 case에서도 사용가능한 이유
 					int money = Integer.parseInt(sc.nextLine());
 					total += money;
 					break;
 				case "2":
 					System.out.print("출금액> ");
-					int money = Integer.parseInt(sc.nextLine());
+					money = Integer.parseInt(sc.nextLine());
 					total -= money;
 					break;
 				case "3":
@@ -53,10 +55,34 @@ public class Practice07 {
 				case "4":
 					select = false;
 					break;
-
-			}*/
+			}
+			*/
+			
+			// switch 표현문(Expression)
+			/*
+			switch(strNum) {
+				case "1" -> {
+					System.out.print("예금액> ");
+					int money = Integer.parseInt(sc.nextLine());
+					total += money;
+				}
+				case "2" -> {
+					System.out.print("출금액> ");
+					int money = Integer.parseInt(sc.nextLine());
+					total -= money;
+				}
+				case "3" -> {
+					System.out.println("잔고> "+ total);
+				}
+				case "4" -> {
+					select = false;
+				}
+				default -> System.out.println("잘못 입력하셨습니다.");		
+			}
+			*/
 			
 		}
+		
 		System.out.println("프로그램 종료");
 	}
 
