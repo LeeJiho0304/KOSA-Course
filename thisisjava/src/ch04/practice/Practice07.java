@@ -8,6 +8,7 @@ public class Practice07 {
 		Scanner sc = new Scanner(System.in);
 		boolean select = true;
 		int total = 0;
+		int money = 0;
 		
 		while(select) {
 			System.out.println("----------------------------------");
@@ -19,11 +20,11 @@ public class Practice07 {
 			
 			if(strNum.equals("1")) {
 				System.out.print("예금액> ");
-				int money = Integer.parseInt(sc.nextLine());
+				money = Integer.parseInt(sc.nextLine());
 				total += money;
 			} else if(strNum.equals("2")) {
 				System.out.print("출금액> ");
-				int money = Integer.parseInt(sc.nextLine());
+				money = Integer.parseInt(sc.nextLine());
 				total -= money;
 			} else if(strNum.equals("3")) {
 				System.out.println("잔고> "+ total);
@@ -40,13 +41,13 @@ public class Practice07 {
 			switch(strNum) {
 				case "1":
 					System.out.print("예금액> ");
-					//case에서 변수 선언해도 다른 case에서도 사용가능한 이유
+					// 공통적으로 사용하는 변수는 swith문 밖에 선언
 					int money = Integer.parseInt(sc.nextLine());
 					total += money;
 					break;
 				case "2":
 					System.out.print("출금액> ");
-					money = Integer.parseInt(sc.nextLine());
+					int money = Integer.parseInt(sc.nextLine());
 					total -= money;
 					break;
 				case "3":
