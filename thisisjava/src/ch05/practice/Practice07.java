@@ -12,7 +12,6 @@ public class Practice07 {
 			}
 		}
 		
-		//향상된 for문
 		/*
 		for(int num : array) {
 			if(num > max) {
