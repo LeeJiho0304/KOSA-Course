@@ -18,6 +18,7 @@ public class NoticeBoard {
 		int day = today.get(Calendar.DAY_OF_MONTH);
 		int hour = today.get(Calendar.HOUR);
 		int minute = today.get(Calendar.MINUTE);
+		int second = today.get(Calendar.SECOND);
 		
 		while(run) {
 			System.out.println("-----------------------------------------------");
@@ -79,7 +80,7 @@ public class NoticeBoard {
 						System.out.print("1.수정 2.삭제 > ");
 						int selectUpdateOrDelete = Integer.parseInt(scanner.nextLine());
 						
-						//선택한 해당 게시글 내용 수정
+						//선택한 해당 게시글 내용 수정  //수정 날짜 추가
 						if(selectUpdateOrDelete == 1) {
 							System.out.print("제목> ");
 							String title = scanner.nextLine();
