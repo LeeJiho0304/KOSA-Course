@@ -27,6 +27,7 @@ public class Q5 {
 		int total = 0;  // 총 걸린 시간
 		int strLength = 0;  // 문자열 길이 합
 		boolean check = false;  // 알고 있는 지 확인 ( 알고있으면 true, 모르면 false )
+		int index = 0;
 		
 		
 		
@@ -35,6 +36,7 @@ public class Q5 {
 			for(int j = 0; j < cnt; j++) { // 알고 있는지 확인
 				if(knownWord[j].equals(teacherWord[i]))	{
 					check = true;
+					index = j;
 					break;
 				}
 			}
@@ -59,12 +61,17 @@ public class Q5 {
 			} else { // 단어를 알고 있는 경우
 				total += 1;
 				// swap
-				String temp = knownWord[N-1];
+				/*String temp = knownWord[N-1];
 				knownWord[N-1] = knownWord[0];
 				for (int j = N-2; j > 0; j--) {
 					knownWord[j-1] = knownWord[j];
 				}
-				knownWord[0] = temp;
+				knownWord[0] = temp;*/
+				for (int j = index; j < cnt - 1; j++) {
+					knownWord[j] = knownWord[j + 1];
+				}
+				knownWord[cnt - 1] = teacherWord[i];
+
 				
 			}
 			for (int k = 0; k < N; k++) {
