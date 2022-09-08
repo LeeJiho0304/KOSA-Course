@@ -1,3 +1,3 @@
 # KOSA-Course
-![thisisjava](https://user-images.githubusercontent.com/102660877/187661503-dbed680d-e508-4aea-bd81-1b0f35029f7b.jpg) 
-개정판
+![image](https://user-images.githubusercontent.com/102660877/189076909-b573d773-78b4-457d-bd57-c45cfa579fcd.png)
+이것이 자바다 개정판
