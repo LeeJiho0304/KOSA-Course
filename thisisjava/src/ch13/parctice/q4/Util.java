@@ -7,4 +7,11 @@ public class Util {
 		}
 		return null;
 	}
+	
+	public static <P extends Pair<K,V>, K, V> V getValue2(P p, K key) {
+		if(p.key.equals(key)) {
+			return p.value;
+		}
+		return null;
+	}
 }
