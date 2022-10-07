@@ -112,6 +112,16 @@ public class ProductServer {
 			});
 		}
 		
+		/* 서버->클라이언트
+		 * {  
+		 * 	 "result":"success",
+		 * 	 "data": [ "no":1,
+		 * 				"name":"productName",
+		 * 				"price":1000,
+		 * 				"stock":10
+		 * 			]
+		 * }
+		 */
 		//메소드 : 메뉴0.상품 목록 출력
 		public void list(JSONObject request) throws IOException {
 			//응답 보내기
